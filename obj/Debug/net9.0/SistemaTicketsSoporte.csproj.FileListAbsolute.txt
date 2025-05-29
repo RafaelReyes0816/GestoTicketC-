@@ -1,0 +1,14 @@
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/bin/Debug/net9.0/SistemaTicketsSoporte
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/bin/Debug/net9.0/SistemaTicketsSoporte.deps.json
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/bin/Debug/net9.0/SistemaTicketsSoporte.runtimeconfig.json
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/bin/Debug/net9.0/SistemaTicketsSoporte.dll
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/bin/Debug/net9.0/SistemaTicketsSoporte.pdb
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.GeneratedMSBuildEditorConfig.editorconfig
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.AssemblyInfoInputs.cache
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.AssemblyInfo.cs
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.csproj.CoreCompileInputs.cache
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.dll
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/refint/SistemaTicketsSoporte.dll
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.pdb
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.genruntimeconfig.cache
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/ref/SistemaTicketsSoporte.dll
