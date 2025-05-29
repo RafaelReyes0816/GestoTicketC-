@@ -12,3 +12,4 @@
 /home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.pdb
 /home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.genruntimeconfig.cache
 /home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/ref/SistemaTicketsSoporte.dll
+/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/Debug/net9.0/SistemaTicketsSoporte.sourcelink.json

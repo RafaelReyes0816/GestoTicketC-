@@ -1,72 +1,63 @@
-﻿using SistemaTicketsSoporte;
+﻿using SistemaTicketsSoporte.Clases;
+using SistemaTicketsSoporte.Estructuras;
+using SistemaTicketsSoporte.Interfaces;
 
-var colaTickets = new TicketCola();
-var pilaCerrados = new TicketPila();
-int _nextId = 1;
+IGestionTickets sistema = new TicketPriorityQueue(); // O cambiás a la que quieras usar
 
-while (true)
+int opcionMenu;
+do
 {
     Console.Clear();
-    Console.WriteLine("🚀 Gestor de Tickets con Estructuras Diversas");
-    Console.WriteLine("1. Crear ticket");
-    Console.WriteLine("2. Asignar ticket (FIFO)");
-    Console.WriteLine("3. Cerrar ticket");
-    Console.WriteLine("4. Ver último cerrado (LIFO)");
-    Console.WriteLine("5. Mostrar todos");
-    Console.WriteLine("6. Salir");
-    Console.Write("Seleccione: ");
+    Console.WriteLine("╔════════════════════════════════════╗");
+    Console.WriteLine("║        GESTIÓN DE TICKETS          ║");
+    Console.WriteLine("╠════════════════════════════════════╣");
+    Console.WriteLine("║ 1. Agregar nuevo ticket            ║");
+    Console.WriteLine("║ 2. Cerrar ticket                   ║");
+    Console.WriteLine("║ 3. Mostrar todos los tickets       ║");
+    Console.WriteLine("║ 4. Salir del sistema               ║");
+    Console.WriteLine("╚════════════════════════════════════╝");
+    Console.Write("Seleccione una opción: ");
 
-    switch (Console.ReadLine())
+    string? entrada = Console.ReadLine();
+    int.TryParse(entrada, out opcionMenu);
+    Console.Clear();
+
+    switch (opcionMenu)
     {
-        case "1":
-            Console.Write("Título: ");
-            string titulo = Console.ReadLine() ?? "";
-            Console.Write("Descripción: ");
-            colaTickets.CrearTicket(new Ticket { Id = _nextId++, Titulo = titulo, Descripcion = Console.ReadLine() ?? "" });
+        case 1:
+            Console.WriteLine(">> AGREGAR NUEVO TICKET");
+            Console.Write("Descripción del problema: ");
+            string descripcion = Console.ReadLine() ?? "Sin descripción";
+            Console.Write("Prioridad [1 (baja) - 5 (alta)]: ");
+            int.TryParse(Console.ReadLine(), out int prioridad);
+            prioridad = Math.Clamp(prioridad, 1, 5);
+            sistema.Agregar(new Ticket(descripcion, prioridad));
+            Console.WriteLine("\nTicket agregado exitosamente.");
             break;
 
-        case "2":
-            var ticketAsignado = colaTickets.AsignarTicket();
-            Console.WriteLine(ticketAsignado != null 
-                ? $"✅ Ticket #{ticketAsignado.Id} asignado." 
-                : "❌ No hay tickets en espera.");
+        case 2:
+            Console.WriteLine(">> CERRAR PRÓXIMO TICKET");
+            sistema.Eliminar();
             break;
 
-        case "3":
-            Console.Write("ID del ticket a cerrar: ");
-            if (int.TryParse(Console.ReadLine(), out int idCerrar))
-            {
-                var ticket = colaTickets.BuscarTicket(idCerrar);
-                if (ticket != null)
-                {
-                    pilaCerrados.Agregar(ticket);
-                    colaTickets.CerrarTicket(idCerrar);
-                    Console.WriteLine($"✅ Ticket #{idCerrar} cerrado.");
-                }
-                else
-                {
-                    Console.WriteLine($"❌ Ticket #{idCerrar} no encontrado.");
-                }
-            }
+        case 3:
+            Console.WriteLine(">> TICKETS EN SISTEMA");
+            sistema.Mostrar();
             break;
 
-        case "4":
-            var ultimoCerrado = pilaCerrados.ObtenerUltimoCerrado();
-            Console.WriteLine(ultimoCerrado != null
-                ? $"📌 Último cerrado: #{ultimoCerrado.Id} - {ultimoCerrado.Titulo}"
-                : "No hay tickets cerrados.");
+        case 4:
+            Console.WriteLine("Saliendo del sistema...");
             break;
 
-        case "5":
-            Console.WriteLine("\n📋 Tickets Activos:");
-            colaTickets.MostrarTickets("EnEspera");
-            Console.WriteLine("\n🛠️ Tickets en Progreso:");
-            colaTickets.MostrarTickets("EnProgreso");
+        default:
+            Console.WriteLine("Opción inválida. Intente de nuevo.");
             break;
-
-        case "6":
-            return;
     }
-    Console.WriteLine("\nPresione una tecla para continuar...");
-    Console.ReadKey();
-}
+
+    if (opcionMenu != 4)
+    {
+        Console.WriteLine("\nPresione cualquier tecla para continuar...");
+        Console.ReadKey();
+    }
+
+} while (opcionMenu != 4);
