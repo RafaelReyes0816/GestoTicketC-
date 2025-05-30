@@ -21,3 +21,10 @@ C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\SistemaTicketsSoporte.so
 C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\SistemaTicketsSoporte.dll
 C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\refint\SistemaTicketsSoporte.dll
 C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\SistemaTicketsSoporte.pdb
+C:\Proyectos\repositorio\GestoTicketC-\bin\Debug\net9.0\SistemaTicketsSoporte.exe
+C:\Proyectos\repositorio\GestoTicketC-\bin\Debug\net9.0\SistemaTicketsSoporte.deps.json
+C:\Proyectos\repositorio\GestoTicketC-\bin\Debug\net9.0\SistemaTicketsSoporte.runtimeconfig.json
+C:\Proyectos\repositorio\GestoTicketC-\bin\Debug\net9.0\SistemaTicketsSoporte.dll
+C:\Proyectos\repositorio\GestoTicketC-\bin\Debug\net9.0\SistemaTicketsSoporte.pdb
+C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\SistemaTicketsSoporte.genruntimeconfig.cache
+C:\Proyectos\repositorio\GestoTicketC-\obj\Debug\net9.0\ref\SistemaTicketsSoporte.dll
