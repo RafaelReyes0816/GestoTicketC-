@@ -10,10 +10,10 @@ namespace SistemaTicketsSoporte.Estructuras
     {
         private List<Tecnico> tecnicos = new List<Tecnico>
         {
-            new Tecnico(1, "Juan Pérez", "Hardware", new List<string> { "Hardware", "Mantenimiento PC", "Monitores" }),
-            new Tecnico(2, "María Gómez", "Software", new List<string> { "Software", "Sistemas Operativos", "Drivers" }),
-            new Tecnico(3, "Carlos Ruiz", "Redes", new List<string> { "Redes", "Internet", "Conexiones" }),
-            new Tecnico(4, "Ana López", "Seguridad", new List<string> { "Seguridad", "Antivirus", "Protección" })
+            new Tecnico(1, "Juan David Cruz Lopez", "Hardware", new List<string> { "Hardware", "Mantenimiento PC", "Monitores" }),
+            new Tecnico(2, "Juan Rafael Reyes Burgos", "Software", new List<string> { "Software", "Sistemas Operativos", "Drivers" }),
+            new Tecnico(3, "Iván Mauricio Orellana Vasquez", "Redes", new List<string> { "Redes", "Internet", "Conexiones" }),
+            new Tecnico(4, "Joel David Cerrogrande Ortega", "Seguridad", new List<string> { "Seguridad", "Antivirus", "Protección" })
         };
 
         public Tecnico? AsignarTecnico(string categoria)
