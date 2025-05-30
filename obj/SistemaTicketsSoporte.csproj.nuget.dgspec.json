@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/SistemaTicketsSoporte.csproj": {}
+    "C:\\Proyectos\\repositorio\\GestoTicketC-\\SistemaTicketsSoporte.csproj": {}
   },
   "projects": {
-    "/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/SistemaTicketsSoporte.csproj": {
+    "C:\\Proyectos\\repositorio\\GestoTicketC-\\SistemaTicketsSoporte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/SistemaTicketsSoporte.csproj",
+        "projectUniqueName": "C:\\Proyectos\\repositorio\\GestoTicketC-\\SistemaTicketsSoporte.csproj",
         "projectName": "SistemaTicketsSoporte",
-        "projectPath": "/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/SistemaTicketsSoporte.csproj",
-        "packagesPath": "/home/rafaelreyes/.nuget/packages/",
-        "outputPath": "/home/rafaelreyes/Documentos/Tareas/SistemaTicketsSoporte/obj/",
+        "projectPath": "C:\\Proyectos\\repositorio\\GestoTicketC-\\SistemaTicketsSoporte.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\repositorio\\GestoTicketC-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/rafaelreyes/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.106/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

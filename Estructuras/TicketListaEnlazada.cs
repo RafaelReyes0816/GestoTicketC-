@@ -1,3 +1,4 @@
+using System;
 using SistemaTicketsSoporte.Clases;
 using SistemaTicketsSoporte.Interfaces;
 
@@ -5,32 +6,36 @@ namespace SistemaTicketsSoporte.Estructuras
 {
     public class TicketListaEnlazada : IGestionTickets
     {
-        private NodoTicket cabeza;
-
-        private class NodoTicket
+        private class Nodo
         {
-            public Ticket ticket;
-            public NodoTicket siguiente;
+            public Ticket Ticket { get; set; }
+            public Nodo? Siguiente { get; set; }
 
-            public NodoTicket(Ticket ticket)
+            public Nodo(Ticket ticket)
             {
-                this.ticket = ticket;
+                Ticket = ticket ?? throw new ArgumentNullException(nameof(ticket));
+                Siguiente = null;
             }
         }
 
+        private Nodo? cabeza = null;
+
         public void Agregar(Ticket ticket)
         {
-            NodoTicket nuevo = new(ticket);
+            Nodo nuevoNodo = new Nodo(ticket);
+            
             if (cabeza == null)
             {
-                cabeza = nuevo;
+                cabeza = nuevoNodo;
             }
             else
             {
-                NodoTicket actual = cabeza;
-                while (actual.siguiente != null)
-                    actual = actual.siguiente;
-                actual.siguiente = nuevo;
+                Nodo actual = cabeza;
+                while (actual.Siguiente != null)
+                {
+                    actual = actual.Siguiente;
+                }
+                actual.Siguiente = nuevoNodo;
             }
         }
 
@@ -42,11 +47,11 @@ namespace SistemaTicketsSoporte.Estructuras
                 return;
             }
 
-            Ticket cerrado = cabeza.ticket;
-            cerrado.Estado = "Cerrado";
-            cabeza = cabeza.siguiente;
+            Ticket ticketEliminado = cabeza.Ticket;
+            ticketEliminado.Estado = "Cerrado";
+            cabeza = cabeza.Siguiente;
 
-            Console.WriteLine($"Ticket cerrado: {cerrado}");
+            Console.WriteLine($"Ticket cerrado:\n{ticketEliminado}");
         }
 
         public void Mostrar()
@@ -57,11 +62,12 @@ namespace SistemaTicketsSoporte.Estructuras
                 return;
             }
 
-            NodoTicket actual = cabeza;
+            Console.WriteLine("════════════ TICKETS EN LISTA ════════════");
+            Nodo? actual = cabeza;
             while (actual != null)
             {
-                Console.WriteLine(actual.ticket);
-                actual = actual.siguiente;
+                Console.WriteLine(actual.Ticket);
+                actual = actual.Siguiente;
             }
         }
     }
